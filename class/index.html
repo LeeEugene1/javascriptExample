@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        //[OPTION 3]
+        class Teletoby{
+            constructor(color,birth){
+                this.color = color,
+                this.birth = birth
+            }
+        }
+
+        const poo = new Teletoby('red','1995-07-14')
+        console.log(poo)
+
+        // [OPTION 2]
+        // function Teletoby(color,birth){
+        //     this.Tcolor = color, //instance혹은 새로생성되는 객체를 지칭한다.
+        //     this.Tbirth = birth
+        // }
+
+        // const boradori = new Teletoby('purple', '1991-09-21')
+        // console.log(boradori)
+        
+        // [OPTION 1]
+        // boradori = {
+        //     color:'purple',
+        //     birth:'1991-09-21'
+        // }
+
+        // nana = {
+        //     color:'yellow',
+        //     birth:'1992-05-07'
+        // }
+
+        // poo = {
+        //     color:'red',
+        //     birth:'1995-05-05'
+        // }
+    </script>
+</body>
+</html>
