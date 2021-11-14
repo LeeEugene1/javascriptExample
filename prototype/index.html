@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 프로토타입은 자바스크립트에만있는 상속방법중하나로
+        // 자식 object에 접근하는방법
+        // 원형이라고하지만 유전자라고생각하면쉽다.
+        
+        class Teletoby{
+            constructor(color,birth){
+                this.color = color,
+                this.birth = birth
+            }
+        }
+
+        const poo = new Teletoby('red','1995-07-14')
+        console.log(poo)
+
+        Teletoby.prototype.height = 180//부모유전자 키가 180
+        console.log(poo.height) //설정해주지않아서 부모한테가서 키를 가져옴
+    </script>
+</body>
+</html>
