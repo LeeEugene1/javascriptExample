@@ -98,7 +98,7 @@ function upgradeUser(user){
     printAgain()
 ```
 
-# callback function
+# callback function + Arrow function
 ```
     function randomQuiz(answer, printYes, printNo){
         if(answer === 'love'){
@@ -107,12 +107,16 @@ function upgradeUser(user){
             printNo()
         }
     }
-    const printYes = function(){
+    <!-- const printYes = function(){
         console.log('Yes')
     }
     const printNo = function(){
         console.log('No')
-    }
+    } -->
+    const printYes = () => console.log('Yes')
+    const printNo = () => console.log('No') 
+    <!-- {}를쓰려면 return이 필요함 -->
     randomQuiz('love',printYes, printNo)
     randomQuiz('no',printYes, printNo)
 ```
+
