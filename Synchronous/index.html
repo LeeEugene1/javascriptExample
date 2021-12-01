@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ㅇㅇㅇㅇ
+    <script>
+        // 1.비동기
+        function synchronous(){
+            const start = Date.now()
+            for(let i = 0; i<100; i++){
+                const end = Date.now()
+                console.log(end - start + 'ms')
+            }
+        }
+        // synchronous()
+        // console.log('next work')
+
+        //2.동기(콜백함수)
+        // function work(callback){
+        //     setTimeout(()=>{
+        //         const start = Date.now()
+        //         for(let i=0; i<100; i++){
+
+        //         }
+        //         const end = Date.now()
+        //         callback(end - start + 'ms')
+        //     }, 0)
+        // }
+        // console.log('start')
+        // work((endTime)=>{
+        //     console.log(endTime)
+        //     console.log('work done')
+        // })
+        // console.log('next')
+    </script>
+    <!-- <script src="/Synchronous/callback-hell.js"></script> -->
+    <!-- <script src="/Synchronous/promise.js"></script> -->
+    <script src="/Synchronous/callbackToPromise.js"></script>
+    <!-- <script src="/Synchronous/callbackToAsync.js"></script> -->
+</body>
+</html>
