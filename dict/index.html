@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Dictionary(){
+			const items = {}
+
+			this.has = function(key){
+				return key in items
+			}
+
+			this.set = function(key, value){
+				items[key] = value
+				// return true
+			}
+
+			this.remove = function(key, value){
+				if(this.has(key)){
+					delete items[key]
+					// return true
+				}
+				// return false
+			}
+
+			this.get = function(key){
+				return this.has(key) ? items[key] : undefined
+			}
+
+			this.values = function () {
+				let values = []
+				for (k in items) {
+					// console.log(`${k}: ${items[k]}`)
+					values.push(items[k])
+				}
+				return values
+			}
+
+		}
+
+
+		const dict = new Dictionary()
+		dict.set('Gandalf', 'gandalf@email.com')
+		dict.set('Jone', 'jonsnow@email.com')
+		dict.set('Tyrion','tyrion@email.com')
+
+		console.log(dict.has('Gandalf'))
+		dict.remove('Gandalf')
+		console.log(dict.has('Gandalf'))
+
+		console.log(dict.get('Jone'))
+
+		console.log(dict.values())
+
+
+	</script>
+</body>
+</html>
